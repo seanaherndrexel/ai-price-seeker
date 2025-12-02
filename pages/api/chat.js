@@ -1,3 +1,4 @@
+// force full rebuild
 import { searchProducts } from '../../lib/shoppingSearch';
 import OpenAI from 'openai';
 
