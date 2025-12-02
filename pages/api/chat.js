@@ -38,7 +38,7 @@ export default async function handler(req, res) {
 
   try {
     const first = await openai.chat.completions.create({
-      model: 'gpt-4-1106-preview',
+      model: 'gpt-4.1-mini',
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: message },
@@ -63,7 +63,7 @@ export default async function handler(req, res) {
     const products = await searchProducts(query, maxPrice);
 
     const second = await openai.chat.completions.create({
-      model: 'gpt-4-1106-preview',
+      model: 'gpt-4.1-mini',
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: message },
